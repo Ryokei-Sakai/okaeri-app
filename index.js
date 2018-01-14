@@ -7,13 +7,13 @@ const axios = require('axios');
 
 const BASE_URL = 'https://api.line.me';
 const PUSH_PATH = '/v2/bot/message/push';//プッシュ用
-const CH_SECRET = process.env.SECRET || ''; //Channel Secretを指定
-const CH_ACCESS_TOKEN = process.env.TOKEN || ''; //Channel Access Tokenを指定
-const USERID = process.env.USERID || ''; //useridを指定
+const CH_SECRET = process.env.SECRET || '28109972550be44d8c6c07a170af89b3'; //Channel Secretを指定
+const CH_ACCESS_TOKEN = process.env.TOKEN || 'qJdBq6LTx7fZ2YjDWP0T9KYN7ak8+5ZPPZG41KphY52IFkYSB9PxNd+ra4WcgnaiBDWSQq7hY1RB1XhxUXvrYV8PUxGNKfvlnG4Y9Kz0UzJbtQnqU9w6idHudrFz3arUC5LBsX8s1YRKRoFpfHjM1AdB04t89/1O/w1cDnyilFU='; //Channel Access Tokenを指定
+const USERID = process.env.USERID || 'Ub17dd35613f128e4d0470db71ae80c07'; //useridを指定
 const SIGNATURE = crypto.createHmac('sha256', CH_SECRET);
 const PORT = process.env.PORT || 3000;
 
-http.createServer((req, res) => {    
+http.createServer((req, res) => {
     if(req.url !== '/' || req.method !== 'POST'){
         res.writeHead(200, {'Content-Type': 'text/plain'});
         res.end('hello');
@@ -22,7 +22,7 @@ http.createServer((req, res) => {
     let body = '';
     req.on('data', (chunk) => {
         body += chunk;
-    });        
+    });
     req.on('end', () => {
         if(body === ''){
           console.log('bodyが空です。');
