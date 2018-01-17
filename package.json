@@ -1,7 +1,7 @@
 {
   "name": "okaeri",
   "version": "1.0.0",
-  "description": "",
+  "description": "## heroku ```bash # heroku cli install brew install heroku",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +11,14 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.17.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://Ryokei-Sakai@github.com/Ryokei-Sakai/okaeri-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ryokei-Sakai/okaeri-app/issues"
+  },
+  "homepage": "https://github.com/Ryokei-Sakai/okaeri-app#readme"
 }
